@@ -1,0 +1,63 @@
+<!-- <table class="table table-bordered border-primary">
+  <tr>
+    <th>client</th>
+    <th>typePresta</th>
+    <th>nbJours</th>
+    <th>state</th>
+    <th>tva</th>
+  </tr>
+  <tr *ngFor="let i of collection">
+    <td> {{i.client}}</td>
+    <td> {{i.typePresta}}</td>
+    <td> {{i.nbJours}}</td>
+    <td> {{i.state}}</td>
+    <td> {{i.tva}}</td>
+  </tr>
+</table> -->
+<!-- table for order -->
+<table class="table">
+  <!-- thead utile pour le référencement -->
+  <thead>
+      <!-- table row (ligne) -->
+      <tr>
+          <!--   table header cells (th) -->
+          <th *ngFor="let i of tables">
+            {{i}}
+          </th>
+      </tr>
+  </thead>
+  <!-- <tbody>
+     <tr>
+         <th scope="row">1</th>
+          table data cells (td)-->
+        <!--  <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+     </tr>
+  </tbody> -->
+</table>
+
+
+
+
+<!-- table for client -->
+<table class="table">
+  <!-- thead utile pour le référencement -->
+  <thead>
+      <!-- table row (ligne) -->
+      <tr>
+        <th *ngFor="let i of tableClient">
+          {{i}}
+        </th>
+      </tr>
+  </thead>
+  <!-- <tbody>
+     <tr>
+         <th scope="row">1</th>
+         <!--  table data cells (td)-->
+       <!--   <td>Mark</td>
+         <td>Otto</td>
+         <td>@mdo</td>
+     </tr>
+  </tbody> -->
+</table>

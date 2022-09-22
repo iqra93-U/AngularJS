@@ -1,13 +1,15 @@
 
-<p>page-list-orders works!</p>
-<table class="table table-bordered border-primary">
-  <tr *ngFor="let i of results">
-    <td> {{i.client}}</td>
-    <td> {{i.typePresta}}</td>
-    <td> {{i.nbJours}}</td>
-    <td> {{i.state}}</td>
-    <td> {{i.tva}}</td>
+<!----[title] come from the page app-templete-full-width.ts(child) , and titleParent this come from page-list-order.component.ts(parent) --->
+ <app-template-full-width [title]="titleParent">
+  <app-table-light [collection] ="results" [tables]="headers">
+
+  </app-table-light>
+
+</app-template-full-width>
+
+<!-- <app-template-container  [title]="titleParent">
+  <app-table-light> </app-table-light>
+</app-template-container> -->
 
 
-  </tr>
-</table>
+
