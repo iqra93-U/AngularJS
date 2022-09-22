@@ -9,7 +9,7 @@ export class TemplateFullWidthComponent implements OnInit {
 
   // the value will come from parent
   @Input() title!: string;
-  @Input() titleClient!: string;
+
   constructor() { }
 
   ngOnInit(): void {

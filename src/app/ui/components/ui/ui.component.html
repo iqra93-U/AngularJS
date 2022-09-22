@@ -7,13 +7,13 @@
   <span (click)="onSubmit()">
     <ng-content
       *ngIf="open"
-      select=".tr-btn-open"
+      select=".tr-btn-close"
       >
     </ng-content>
 
     <ng-content
       *ngIf="!open"
-      select=".tr-btn-close"
+      select=".tr-btn-open"
       >
     </ng-content>
   </span>

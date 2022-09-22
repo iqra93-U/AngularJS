@@ -9,11 +9,11 @@ import { Order } from 'src/app/core/models/order';
 })
 export class TableLightComponent implements OnInit {
   @Input() collection!: Order[];
-  @Input() tables!: string[];
+  @Input() tables!: string[]; // display header
 
   // for Clients table
   @Input() collectionClient!:Client[];
-  @Input() tableClient!: string[]; // display header
+
 
   constructor() {
     console.log(this.collection);  //undefined
