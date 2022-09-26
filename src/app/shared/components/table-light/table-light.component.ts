@@ -8,29 +8,27 @@ import { Order } from 'src/app/core/models/order';
   styleUrls: ['./table-light.component.scss']
 })
 export class TableLightComponent implements OnInit {
-  @Input() collection!: Order[];
+  @Input() collection!: any;
   @Input() tables!: string[]; // display header
 
-  // for Clients table
-  @Input() collectionClient!:Client[];
+
 
 
   constructor() {
     console.log(this.collection);  //undefined
     console.log(this.tables ,'inconstructor'); //undefined
-    console.log(this.collectionClient ,'inconstructorn for clients'); //undefined
    }
 
   ngOnInit(): void {
     console.log(this.collection); //undefined
     console.log(this.tables , 'OnInit Table');
-    console.log(this.collectionClient ,'OnInit Table for clients');
+
   }
 
   // it take the time collection to declare, so in Onchange it will display the values
   ngOnChanges(){
     console.log(this.collection);
-    console.log(this.collectionClient);
+
 
   }
 }

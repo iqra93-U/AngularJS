@@ -9,6 +9,14 @@ export class Order {
   client!: string;
   comment!: string;
   id!: number; // ! its means value is not initiallised
+  // ici on ajoute directement les méthodes
+  totalHT(): number {
+    return this.tjmHt * this.nbJours;
+  }
+  totalTTC(): number {
+    return this.tjmHt * this.nbJours * (1+ this.tva/100);
+  }
+
   // ? means any value from the above object we can use to create an new object
   // constructor() or constructor(tjmHt,nbJours,....  ) instead of creating consructor like this we use
   // a general method with obj which means a consructor could be empty of can pass any value.

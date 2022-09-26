@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { StateOrder } from 'src/app/core/enums/state-order';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../service/orders.service';
 
@@ -8,9 +10,13 @@ import { OrdersService } from '../../service/orders.service';
   styleUrls: ['./page-list-orders.component.scss']
 })
 export class PageListOrdersComponent implements OnInit {
+// variable to store enum
+ public states = Object.values(StateOrder);
+
+
   public titleParent:string ='List of Orders'
 
-  public results !: Order[];
+  public collection$ !:Observable<Order[]>
 
   public headers: string[]= [
     'Type',
@@ -24,15 +30,17 @@ export class PageListOrdersComponent implements OnInit {
 
 
   constructor(private orderService: OrdersService) {
-    this.orderService.collection.subscribe((data) => {
-      this.results = data;
-      console.log(this.results);
-    })
+
+      this.collection$ = this.orderService.collection;
+      console.log(this.collection$);
+
+
 
    }
 
   ngOnInit(): void {
 
   }
+
 
 }
